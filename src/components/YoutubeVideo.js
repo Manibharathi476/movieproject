@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import YouTube from 'react-youtube';
  
 const YoutubeVideo = (props) => {
@@ -18,7 +18,9 @@ const YoutubeVideo = (props) => {
   
 
   return (
-        <div  className='col s12 m8 l3'>
+    <Fragment>
+  <div style={{paddingBottom: "10px", paddingRight: "10px", paddingLeft:"20px", paddingTop: "20px"}}>
+
           <YouTube
             videoId={props.movieId} 
             opts = {opts} 
@@ -26,7 +28,7 @@ const YoutubeVideo = (props) => {
           />
           
         </div>
-
+</Fragment>
   )
 
 

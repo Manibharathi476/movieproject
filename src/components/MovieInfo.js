@@ -1,4 +1,5 @@
 import React from 'react';
+import { Label } from 'react-bootstrap';
 import YoutubeVideo from './YoutubeVideo';
 
 const MovieInfo = (props) => {
@@ -15,10 +16,10 @@ const MovieInfo = (props) => {
                 </div>
                 <div className='col s12 m8'>
                     <div className='info-container'>
-                        <p>{props.currentMovie.title}</p>
-                        <p>{props.currentMovie.release_date.substring(5).split("-").concat(props.currentMovie.release_date.substring(0,4)).join("/")}</p>
-                        <p>{props.currentMovie.overview}</p>
-                        <p>{props.currentMovie.id}</p>
+                        <p><b>Name: </b>{props.currentMovie.title}</p>
+                        <p><b>Release date: </b>{props.currentMovie.release_date.substring(5).split("-").concat(props.currentMovie.release_date.substring(0,4)).join("/")}</p>
+                        <p><b>Overview: </b>{props.currentMovie.overview}</p>
+                        
                         <p><b>Popularity: </b>{props.currentMovie.popularity}</p>
                     </div>    
                 </div>    
